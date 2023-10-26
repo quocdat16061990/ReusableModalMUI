@@ -1,25 +1,7 @@
-#ReusableModal Guide
-
-This document provides a guide for using the ReusableModal component to effortlessly and flexibly create modals in your project.
-
-Prerequisites
-
-- React
-- Material-UI
-- Framer Motion (for modal animations)
-
-Instalation
-
-- Install necessary libraries: npm install @mui/material framer-motion prop-types
-
-Usage
-
-- Import and utilize the ReusableModal:
-
-```
 import { Button } from "@mui/material";
 import { useState } from "react";
-import ReusableModal from "path_to/Modal";
+import "./FormModal.css";
+import ReusableModal from "../../shared/Modal/Modal";
 import TextField from "@mui/material/TextField";
 export default function FormModal() {
   const [open, setOpen] = useState(false);
@@ -153,66 +135,3 @@ export default function FormModal() {
     </div>
   );
 }
-
-```
-
-- Import customnize CSS the ReusableModal:
-
-```
-.modal-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-.modal-top-icon {
-  border-radius: 10px;
-  border: 1px solid var(--gray-200, #e4e7ec);
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-}
-.heading {
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 600;
-}
-.desc {
-  font-size: 14px;
-  line-height: 20px;
-}
-.label {
-  color: var(--gray-700, #344054);
-
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  display: block;
-  margin-bottom: 6px;
-}
-.modal-footer {
-  display: flex;
-  padding: 32px 24px 24px 24px;
-  align-items: flex-start;
-  gap: 12px;
-  align-self: stretch;
-}
-
-```
-
-Here is the result:<br>
-
-<a href="https://ibb.co/bLfM9QL"><img src="https://i.ibb.co/d6hwYj6/Screessssssssssssssssssssssssssssssssssssssssssssssssssssnshot-2023-10-26-150032.png"  /></a>
-
-Features and Props
-
-- open: Boolean type, determines if the modal is currently open or not.
-- onClose: A function that gets called to close the modal.
-- heading: The content inside modal's header.
-- children: The content inside the modal.
-- footerContent: Content for the modal's footer.
-- isAnimate: (default is true) Determines whether to apply animation effects to the modal or not.
-
-Customization
-
-- To customize the modal, you can add or modify styles in the Modal.css file or add other props to ReusableModal for extended customizability.
